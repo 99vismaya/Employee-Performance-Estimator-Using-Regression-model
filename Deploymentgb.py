@@ -17,13 +17,6 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import pickle
 
-import pyodbc
-connection = pyodbc.connect('Driver={SQL Server};'
-                            'Server=DESKTOP-L2HEKGH;'
-                            'Database=TutorialDB;'
-                            'Trusted_Connection=yes;')
-df = pd.read_sql_query('SELECT * FROM Employee',connection)
-
 st.markdown('<p style ="text-align: center; color:Green; font-size: 40px;font-family:serif;" > EMPLOYEE PERFORMANCE CALCULATING APP </p>',unsafe_allow_html=True)    
 
 emp_perf_model_path = 'C:/Users/ADMIN/GB_pkl_filename'
@@ -31,7 +24,7 @@ emp_perf_model = pickle.load(
     open(emp_perf_model_path, 'rb'))
 
 def main():
-    cd = df		
+    cd = pd.read_excel("H:\p_67.xlsx")	
 
     labelencoder = LabelEncoder()
     cd["Gender"]= labelencoder.fit_transform(cd["Gender"])
