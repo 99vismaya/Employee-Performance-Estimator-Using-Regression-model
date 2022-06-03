@@ -4,14 +4,7 @@ Created on Sun Feb 13 18:45:38 2022
 
 @author: ADMIN
 """
-echo "# streamlit-to-heroku-tutorial" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M master
-git remote add origin https://github.com/99vismaya/kisan.git
-git push -u origin master
-
+import main
 import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
@@ -67,8 +60,7 @@ def main():
     op = op.sort_values(by='EmpNumber',ascending = True)
     return(op)
 
-if __name__ == '__main__':
-    z = main()
+z = main()
 dp = st.sidebar.multiselect("Department",options = z['EmpDepartment'].unique(),default =z['EmpDepartment'].unique())
 v = z.query("EmpDepartment == @dp")
 st.write(v)
