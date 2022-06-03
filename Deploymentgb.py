@@ -67,7 +67,8 @@ def main():
     op = op.sort_values(by='EmpNumber',ascending = True)
     return(op)
 
-z = main()
+if __name__ == '__main__':
+    z = main()
 dp = st.sidebar.multiselect("Department",options = z['EmpDepartment'].unique(),default =z['EmpDepartment'].unique())
 v = z.query("EmpDepartment == @dp")
 st.write(v)
