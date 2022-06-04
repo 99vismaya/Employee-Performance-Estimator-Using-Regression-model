@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run Deploymentgb.py
+web: sh setup.sh && streamlit run --server.port $PORT Deploymentgb.py
