@@ -14,8 +14,12 @@ st.markdown('<p style ="text-align: center; color:Green; font-size: 40px;font-fa
 emp_perf_model_path = open("GB_pkl_filename.pkl","rb")
 emp_perf_model=pickle.load(emp_perf_model_path)
 
+cd_path = open("p_67.xlsx","rb")
+cda = pd.read_excel(cd_path)	
+
+
 def main():
-    cd = pd.read_excel("H:/p_67.xlsx")	
+    cd = cda
 
     labelencoder = LabelEncoder()
     cd["Gender"]= labelencoder.fit_transform(cd["Gender"])
