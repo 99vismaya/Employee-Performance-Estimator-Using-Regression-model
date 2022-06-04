@@ -15,7 +15,7 @@ emp_perf_model_path = "GB_pkl_filename"
 emp_perf_model = pickle.load(open(emp_perf_model_path, 'rb'))
 
 def main():
-    cd = pd.read_excel("H:\p_67.xlsx")	
+    cd = pd.read_excel("p_67.xlsx")	
 
     labelencoder = LabelEncoder()
     cd["Gender"]= labelencoder.fit_transform(cd["Gender"])
