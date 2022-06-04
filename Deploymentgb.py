@@ -4,7 +4,6 @@ Created on Sun Feb 13 18:45:38 2022
 
 @author: ADMIN
 """
-import main
 import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
