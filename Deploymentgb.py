@@ -11,7 +11,7 @@ import pickle
 
 st.markdown('<p style ="text-align: center; color:Green; font-size: 40px;font-family:serif;" > EMPLOYEE PERFORMANCE CALCULATING APP </p>',unsafe_allow_html=True)    
 
-emp_perf_model_path = "C:/Users/ADMIN/GB_pkl_filename"
+emp_perf_model_path = "GB_pkl_filename"
 emp_perf_model = pickle.load(open(emp_perf_model_path, 'rb'))
 
 def main():
