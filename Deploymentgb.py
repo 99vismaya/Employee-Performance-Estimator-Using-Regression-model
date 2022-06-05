@@ -14,7 +14,7 @@ st.markdown('<p style ="text-align: center; color:Green; font-size: 40px;font-fa
 emp_perf_model_path = open("GB_pkl_filename.pkl","rb")
 emp_perf_model=pickle.load(emp_perf_model_path)
 
- cd = pd.read_excel("H:/p_67.xlsx")
+cd = pd.read_excel("H:/p_67.xlsx")
 
 def main():
     
