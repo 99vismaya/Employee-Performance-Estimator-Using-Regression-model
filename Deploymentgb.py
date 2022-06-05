@@ -4,13 +4,6 @@ Created on Sun Feb 13 18:45:38 2022
 
 @author: ADMIN
 """
-import pyodbc
-connection = pyodbc.connect('Driver={SQL Server};'
-                            'Server=DESKTOP-L2HEKGH;'
-                            'Database=TutorialDB;'
-                            'Trusted_Connection=yes;')
-df = pd.read_sql_query('SELECT * FROM Employee',connection)
-
 import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
@@ -22,7 +15,7 @@ emp_perf_model_path = open("GB_pkl_filename.pkl","rb")
 emp_perf_model=pickle.load(emp_perf_model_path)
 
 def main():
-    cd = df
+    cd = pd.read_excel("H:\p_67")
 
     labelencoder = LabelEncoder()
     cd["Gender"]= labelencoder.fit_transform(cd["Gender"])
