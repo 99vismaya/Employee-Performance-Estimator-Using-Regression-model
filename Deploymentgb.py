@@ -74,8 +74,8 @@ hide_table_row_index = """
 st.markdown(hide_table_row_index,unsafe_allow_html=True)  
 dp = st.sidebar.multiselect("Department",options = z['EmpDepartment'].unique(),default =z['EmpDepartment'].unique())
 v = z.query("EmpDepartment == @dp")
-st.write(v)
+st.table(v)
 
 g = st.text_input('EmpNumber')
 h = z.query("EmpNumber==@g")
-st.write(h)
+st.table(h)
