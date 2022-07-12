@@ -10,6 +10,7 @@ from sklearn.preprocessing import LabelEncoder
 import pickle
 
 st.markdown('<p style ="text-align: center; color:Green; font-size: 40px;font-family:serif;" > EMPLOYEE PERFORMANCE CALCULATING APP </p>',unsafe_allow_html=True)    
+st.write("Calculated employee performance along with employee details")
 
 emp_perf_model_path = open("GB_pkl_filename.pkl","rb")
 emp_perf_model=pickle.load(emp_perf_model_path)
