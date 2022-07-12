@@ -10,7 +10,7 @@ from sklearn.preprocessing import LabelEncoder
 import pickle
 
 st.markdown('<p style ="text-align: center; color:Green; font-size: 40px;font-family:serif;" > EMPLOYEE PERFORMANCE CALCULATING APP </p>',unsafe_allow_html=True)    
-st.write("Calculated employee performance along with employee details")
+st.write("Calculated employee performance rating along with employee details")
 
 emp_perf_model_path = open("GB_pkl_filename.pkl","rb")
 emp_perf_model=pickle.load(emp_perf_model_path)
@@ -77,6 +77,7 @@ dp = st.sidebar.multiselect("Department",options = z['EmpDepartment'].unique(),d
 v = z.query("EmpDepartment == @dp")
 st.write(v)
 
+st.write("To get performance rating of individual employee") 
 g = st.text_input('EmpNumber')
 h = z.query("EmpNumber==@g")
 st.write(h)
