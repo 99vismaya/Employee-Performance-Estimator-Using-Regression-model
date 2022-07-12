@@ -77,7 +77,7 @@ dp = st.sidebar.multiselect("Department",options = z['EmpDepartment'].unique(),d
 v = z.query("EmpDepartment == @dp")
 st.write(v)
 
-st.write("To get performance rating of individual employee") 
+st.write("To get performance rating of individual employee enter employee number") 
 g = st.text_input('EmpNumber')
 h = z.query("EmpNumber==@g")
 st.write(h)
