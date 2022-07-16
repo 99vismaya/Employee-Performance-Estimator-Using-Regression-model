@@ -9,7 +9,7 @@ Data is pulled from the SQL database where employee data is stored. It has 5100 
 Target variable - Performance Rating. It is a continuous
 
 # Model building
-As output variable is continuous, regression models are trained and Gradient boost model with 96% accuracy is selected for model building
+As output variable is continuous, regression models are trained and Gradient boost model with RMSE 0.01 and R2 score 0.99 is selected for model building
 
 Deployment
 Streamlit framework is used for app building. Using features performance is predicted and is displayed with other employee details. Department filter is added to filter employees based on deparment. We can also get prediction along with employee details for individual employee.
