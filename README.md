@@ -12,7 +12,7 @@ Target variable - Performance Rating. It is a continuous
 As output variable is continuous, regression models are trained. Decision tree, Random forest, Ada Boost, Gradient Boost, XGboost, Multinomial Regression are some models trained and Gradient boost model with RMSE 0.01 and R2 score 0.99 is selected for model building
 
 Deployment
-Streamlit framework is used for app building.Cloud deployment was done in Streamlit cloud deployment platform. Using features performance is predicted and is displayed with other employee details. Department filter is added to filter employees based on deparment. We can also get prediction along with employee details for individual employee.
+Streamlit framework is used for app building.Cloud deployment is done in Streamlit cloud deployment platform. Using features performance is predicted and is displayed with other employee details. Department filter is added to filter employees based on deparment. We can also get prediction along with employee details for individual employee.
 
 App Link:https://99vismaya-employee-performance-estimator-using-regre-app-lcn0hy.streamlit.app/
 
